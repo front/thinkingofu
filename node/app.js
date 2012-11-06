@@ -36,9 +36,9 @@
 
 
 var application_root = __dirname,
-    express = require("express"),
-    path = require("path"),
-    mongoose = require('mongoose');
+express = require("express"),
+path = require("path"),
+mongoose = require('mongoose');
 
 var app = express();
 
@@ -59,22 +59,44 @@ app.configure(function () {
 var Schema = mongoose.Schema;  
 
 var ThoughtModel = new Schema({  
-    thinker: { type: String, required: true },  
-    thinkee: { type: String, required: true },  
-    thoughtStarted: { type: Date, default: Date.now }
+  thinker: { type: String, required: true },  
+  thinkee: { type: String, required: true },  
+  thoughtStarted: { type: Date, default: Date.now }
 });
 
 var ThoughtModel = mongoose.model('ThoughtModel', ThoughtModel);  
 
 // Define rest api
 app.get('/api/thoughts', function (req, res){
-  return ThoughtModel.find(function (err, products) {
+  return ThoughtModel.find(function (err, thoughts) {
     if (!err) {
-      return res.send(products);
+      return res.send(thoughts);
     } else {
       return console.log(err);
     }
   });
+});
+
+
+
+// app.get('/', function (req, res) {
+//  var thoughts = ThoughtModel.find(function (err, thoughts) {
+//   if (!err) {
+//     var result = "";
+//     Object.keys(thoughts).forEach(function(key) {
+//       var val = thoughts[key];
+//       var str = "<div>" + val.thinker + " is thinking of " + val.thinkee + "</div>" ;
+//       result = result + str; 
+//       console.log(str);
+//     });
+//       res.send(result);
+
+//  }; 
+
+// });
+// });
+app.get('/', function (req, res) {
+  res.render('index.jade', { title: 'WhosThinkingAboutWho', thoughts: ["one", "two"], errors: [] });
 });
 
 app.post('/api/think', function (req, res){
@@ -99,6 +121,9 @@ app.post('/api/think', function (req, res){
 app.get('/api', function (req, res) {
   res.send('Thinking of you API is running');
 });
+
+
+
 
 // Launch server
 app.listen(3000);
