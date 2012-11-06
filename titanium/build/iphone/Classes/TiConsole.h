@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2012 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by ThinkingOfU, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 

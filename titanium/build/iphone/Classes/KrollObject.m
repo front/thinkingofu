@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2011 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2011 by ThinkingOfU, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -520,10 +520,10 @@ bool KrollSetProperty(TiContextRef jsContext, TiObjectRef object, TiStringRef pr
 
 // forward declare these
 
-//@interface _titaniumObject : NSObject
+//@interface ThinkingOfUObject : NSObject
 //@end
 
-@interface _titaniumObject (Private)
+@interface ThinkingOfUObject (Private)
 -(NSDictionary*)modules;
 @end
 
@@ -541,9 +541,9 @@ void KrollPropertyNames(TiContextRef ctx, TiObjectRef object, TiPropertyNameAccu
 	{
 		id target = [o target];
 		
-		if ([o isKindOfClass:[_titaniumObject class]])
+		if ([o isKindOfClass:[ThinkingOfUObject class]])
 		{
-			for (NSString *key in [[(_titaniumObject*)o modules] allKeys])
+			for (NSString *key in [[(ThinkingOfUObject*)o modules] allKeys])
 			{
 				TiStringRef value = TiStringCreateWithUTF8CString([key UTF8String]);
 				TiPropertyNameAccumulatorAddName(propertyNames,value);

@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -34,12 +34,12 @@ MAKE_SYSTEM_PROP(DONE,UIBarButtonSystemItemDone);
 MAKE_SYSTEM_PROP(FLEXIBLE_SPACE,UIBarButtonSystemItemFlexibleSpace);
 MAKE_SYSTEM_PROP(FIXED_SPACE,UIBarButtonSystemItemFixedSpace);
 
-MAKE_SYSTEM_PROP(ACTIVITY,UI_titaniumNativeItemSpinner);
-MAKE_SYSTEM_PROP(SPINNER,UI_titaniumNativeItemSpinner);
-MAKE_SYSTEM_PROP(INFO_LIGHT,UI_titaniumNativeItemInfoLight);
-MAKE_SYSTEM_PROP(INFO_DARK,UI_titaniumNativeItemInfoDark);
-MAKE_SYSTEM_PROP(DISCLOSURE,UI_titaniumNativeItemDisclosure);
-MAKE_SYSTEM_PROP(CONTACT_ADD,UI_titaniumNativeItemContactAdd);
+MAKE_SYSTEM_PROP(ACTIVITY,UIThinkingOfUNativeItemSpinner);
+MAKE_SYSTEM_PROP(SPINNER,UIThinkingOfUNativeItemSpinner);
+MAKE_SYSTEM_PROP(INFO_LIGHT,UIThinkingOfUNativeItemInfoLight);
+MAKE_SYSTEM_PROP(INFO_DARK,UIThinkingOfUNativeItemInfoDark);
+MAKE_SYSTEM_PROP(DISCLOSURE,UIThinkingOfUNativeItemDisclosure);
+MAKE_SYSTEM_PROP(CONTACT_ADD,UIThinkingOfUNativeItemContactAdd);
 
 
 @end

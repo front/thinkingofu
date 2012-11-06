@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -16,7 +16,7 @@
  */
 @protocol TiKeyboardFocusableView
 
-#pragma mark Public _titanium APIs.
+#pragma mark Public ThinkingOfU APIs.
 
 /**
  Tells the view to focus.

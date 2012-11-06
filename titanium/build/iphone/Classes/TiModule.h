@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -12,7 +12,7 @@
 @class TiHost;
 
 /**
- The base class for all _titanium modules
+ The base class for all ThinkingOfU modules
  */
 @interface TiModule : TiProxy 
 {
@@ -49,30 +49,30 @@
 // lifecycle
 
 /**
- _titanium Platform calls this method on startup.
+ ThinkingOfU Platform calls this method on startup.
  */
 -(void)startup;
 
 /**
- _titanium Platform calls this method on shutdown.
+ ThinkingOfU Platform calls this method on shutdown.
  @param sender The sender of the event.
  */
 -(void)shutdown:(id)sender;
 
 /**
- _titanium Platform calls this method on suspend.
+ ThinkingOfU Platform calls this method on suspend.
  @param sender The sender of the event.
  */
 -(void)suspend:(id)sender;
 
 /**
- _titanium Platform calls this method on entering background.
+ ThinkingOfU Platform calls this method on entering background.
  @param sender The sender of the event.
  */
 -(void)paused:(id)sender;
 
 /**
- _titanium Platform calls this method on resume.
+ ThinkingOfU Platform calls this method on resume.
  @param sender The sender of the event.
  */
 -(void)resume:(id)sender;

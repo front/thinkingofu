@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -9,9 +9,9 @@
 
 
 // A good bit of this code was derived from the Three20 project
-// and was customized to work inside _titanium
+// and was customized to work inside ThinkingOfU
 //
-// All modifications by _titanium are licensed under 
+// All modifications by ThinkingOfU are licensed under 
 // the Apache License, Version 2.0
 //
 //

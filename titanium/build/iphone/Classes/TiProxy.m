@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -33,7 +33,7 @@ NSString * const TiExceptionOSError = @"The iOS reported an error";
 //Should be rare, but also useful if arguments are used improperly.
 NSString * const TiExceptionInternalInconsistency = @"Value was not the value expected";
 
-//Rare exceptions to indicate a bug in the _titanium code (Eg, method that a subclass should have implemented)
+//Rare exceptions to indicate a bug in the _thinkingofu code (Eg, method that a subclass should have implemented)
 NSString * const TiExceptionUnimplementedFunction = @"Subclass did not implement required method";
 
 NSString * const TiExceptionMemoryFailure = @"Memory allocation failed";

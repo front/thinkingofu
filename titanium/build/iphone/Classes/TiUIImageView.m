@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -423,7 +423,7 @@ DEFINE_EXCEPTIONS
 -(void)loadDefaultImage:(CGSize)imageSize
 {
     // use a placeholder image - which the dev can specify with the
-    // defaultImage property or we'll provide the _titanium stock one
+    // defaultImage property or we'll provide the ThinkingOfU stock one
     // if not specified
     NSURL *defURL = [TiUtils toURL:[self.proxy valueForKey:@"defaultImage"] proxy:self.proxy];
     

@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -63,10 +63,10 @@
 {
 	switch(styleCache)
 	{
-		case UI_titaniumNativeItemInfoLight:
-		case UI_titaniumNativeItemInfoDark:
+		case UIThinkingOfUNativeItemInfoLight:
+		case UIThinkingOfUNativeItemInfoDark:
 			return 18;
-		case UI_titaniumNativeItemDisclosure:
+		case UIThinkingOfUNativeItemDisclosure:
 			return 29;
 		default: {
 			break;
@@ -79,10 +79,10 @@
 {
 	switch(styleCache)
 	{
-		case UI_titaniumNativeItemInfoLight:
-		case UI_titaniumNativeItemInfoDark:
+		case UIThinkingOfUNativeItemInfoLight:
+		case UIThinkingOfUNativeItemInfoDark:
 			return 19;
-		case UI_titaniumNativeItemDisclosure:
+		case UIThinkingOfUNativeItemDisclosure:
 			return 31;
 		default: {
 			break;
@@ -96,9 +96,9 @@
 {
 	switch (styleCache)
 	{
-		case UI_titaniumNativeItemInfoLight:
-		case UI_titaniumNativeItemInfoDark:
-		case UI_titaniumNativeItemDisclosure:
+		case UIThinkingOfUNativeItemInfoLight:
+		case UIThinkingOfUNativeItemInfoDark:
+		case UIThinkingOfUNativeItemDisclosure:
 			return suggestedResizing & ~(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		default: {
 			break;

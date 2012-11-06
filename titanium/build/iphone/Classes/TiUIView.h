@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -42,7 +42,7 @@ void ModifyScrollViewForKeyboardHeightAndContentHeightWithResponderRect(UIScroll
 @class TiViewProxy;
 
 /**
- Base class for all _titanium views.
+ Base class for all ThinkingOfU views.
  @see TiViewProxy
  */
 @interface TiUIView : UIView<TiProxyDelegate,LayoutAutosizing> 
@@ -234,7 +234,7 @@ void ModifyScrollViewForKeyboardHeightAndContentHeightWithResponderRect(UIScroll
 -(void)checkBounds;
 
 /**
- Whether or not a view not normally picked up by the _titanium view hierarchy (such as wrapped iOS UIViews) was touched.
+ Whether or not a view not normally picked up by the ThinkingOfU view hierarchy (such as wrapped iOS UIViews) was touched.
  @return _YES_ if the view contains specialized content (such as a system view) which should register as a touch for this view, _NO_ otherwise.
  */
 -(BOOL)touchedContentViewWithEvent:(UIEvent*)event;

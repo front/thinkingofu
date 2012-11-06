@@ -3,19 +3,36 @@ function FirstView() {
 	//create object instance, a parasitic subclass of Observable
 	var self = Ti.UI.createView();
 	
-	//label using localization-ready strings from <app dir>/i18n/en/strings.xml
-	var label = Ti.UI.createLabel({
-		color:'#000000',
-		text:String.format(L('welcome'),'Titanium'),
-		height:'auto',
-		width:'auto'
-	});
-	self.add(label);
+
 	
-	//Add behavior for UI
-	label.addEventListener('click', function(e) {
-		alert(e.source.text);
+	var thinker = Ti.UI.createTextField({
+		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		color: '#336699',
+		top: 10, left: 10,
+		width: 250, height: 60
 	});
+	
+		var thinkee = Ti.UI.createTextField({
+		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		color: '#336699',
+		top: 10, left: 10,
+		width: 250, height: 60
+	});
+
+
+self.add(thinker);
+self.add(thinkee);
+	
+	
+	var image = Ti.UI.createImageView({
+		image:'/images/henrik.jpg'
+	});
+self.add(image);
+	
+	image.addEventListener('touchstart', function(e){
+		alert(e);
+	});
+	
 	
 	return self;
 }

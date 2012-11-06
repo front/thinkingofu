@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -19,9 +19,9 @@
 
 #ifdef KROLL_COVERAGE
 # import "KrollCoverage.h"
-@interface _titaniumObject : KrollCoverageObject {
+@interface ThinkingOfUObject : KrollCoverageObject {
 #else
-@interface _titaniumObject : KrollObject {
+@interface ThinkingOfUObject : KrollObject {
 #endif
 @private
 	NSMutableDictionary *modules;
@@ -35,7 +35,7 @@
 -(TiModule*)moduleNamed:(NSString*)name context:(id<TiEvaluator>)context;
 @end
 
-extern NSString * _titanium$ModuleRequireFormat;
+extern NSString * ThinkingOfU$ModuleRequireFormat;
 
 @interface KrollBridge : Bridge<TiEvaluator,KrollDelegate> {
 @private
@@ -44,7 +44,7 @@ extern NSString * _titanium$ModuleRequireFormat;
 	KrollContext *context;
 	NSDictionary *preload;
 	NSMutableDictionary *modules;
-	_titaniumObject *_titanium;
+	ThinkingOfUObject *_thinkingofu;
     KrollObject* console;
 	BOOL shutdown;
     BOOL evaluationError;

@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -112,7 +112,7 @@ typedef enum {
 @end
 
 /**
- The ImageLoader class provides a centralized point for loading images in _titanium.
+ The ImageLoader class provides a centralized point for loading images in ThinkingOfU.
  Using ImageLoader is the preferred way for getting images from remote sources.
  
  The class is singleton and not supposed to be subclassed.

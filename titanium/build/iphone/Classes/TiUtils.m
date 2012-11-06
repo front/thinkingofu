@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2012 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by ThinkingOfU, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -34,7 +34,7 @@ extern NSString * const TI_APPLICATION_RESOURCE_DIR;
 static NSDictionary* encodingMap = nil;
 static NSDictionary* typeMap = nil;
 static NSDictionary* sizeMap = nil;
-static NSString* kAppUUIDString = @"com.titanium.uuid"; // don't obfuscate
+static NSString* kAppUUIDString = @"com.thinkingofu.uuid"; // don't obfuscate
 
 bool Base64AllocAndEncodeData(const void *inInputData, size_t inInputDataSize, char **outOutputDataPtr, size_t *outOutputDataSize)
 {

@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -164,7 +164,7 @@
 @interface TiRootViewController (unsupported_internal)
 /*
  *	Methods declarations stored or moved in this category are NOT to be used
- *	by modules, as these methods can be added or removed from _titanium as
+ *	by modules, as these methods can be added or removed from ThinkingOfU as
  *	needed, and have not been vetted for long-term use. This category itself
  *	may be moved to a private header later on, even.
  */

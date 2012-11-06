@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -204,7 +204,7 @@ TiValueRef KrollCallAsFunction(TiContextRef jsContext, TiObjectRef func, TiObjec
 	NSMethodSignature *methodSignature = [target methodSignatureForSelector:selector];
 	if (methodSignature==nil)
 	{
-		@throw [NSException exceptionWithName:@"org.titanium.kroll" reason:[NSString stringWithFormat:@"invalid method '%@'",NSStringFromSelector(selector)] userInfo:nil];
+		@throw [NSException exceptionWithName:@"org.thinkingofu.kroll" reason:[NSString stringWithFormat:@"invalid method '%@'",NSStringFromSelector(selector)] userInfo:nil];
 	}
 	IMP methodFunction = [target methodForSelector:selector];
 	id arg1=nil;

@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -706,7 +706,7 @@ DEFINE_EXCEPTIONS
 		{
 			NSMutableDictionary *errorDetail = [NSMutableDictionary dictionary];
 			[errorDetail setValue:@"Response returned nil" forKey:NSLocalizedDescriptionKey];
-			NSError *error = [NSError errorWithDomain:@"com.titanium._titanium.imageloader" code:1 userInfo:errorDetail];
+			NSError *error = [NSError errorWithDomain:@"com.thinkingofu._thinkingofu.imageloader" code:1 userInfo:errorDetail];
 			[[req delegate] imageLoadFailed:req error:error];
 			[request setUserInfo:nil];
 			[request release];
@@ -766,7 +766,7 @@ DEFINE_EXCEPTIONS
                  
 			NSMutableDictionary* errorDetail = [NSMutableDictionary dictionary];
 			[errorDetail setValue:@"Returned invalid image data" forKey:NSLocalizedDescriptionKey];
-			NSError* error = [NSError errorWithDomain:@"com.titanium._titanium.imageloader" code:1 userInfo:errorDetail];
+			NSError* error = [NSError errorWithDomain:@"com.thinkingofu._thinkingofu.imageloader" code:1 userInfo:errorDetail];
 			[[req delegate] imageLoadFailed:req error:error];
 			[request setUserInfo:nil];
 			[request release];

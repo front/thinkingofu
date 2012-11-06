@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -60,7 +60,7 @@ extern "C" {
 	#define KMETHOD_DEBUG MEMORY_DEBUG
 #endif
 
-// in simulator we redefine to format for _titanium Developer console
+// in simulator we redefine to format for ThinkingOfU Developer console
 
 
 #define TI_INLINE static __inline__
@@ -296,14 +296,14 @@ void TiExceptionThrowWithNameAndReason(NSString * exceptionName, NSString * mess
 #define DEFINE_EXCEPTIONS \
 - (void) throwException:(NSString *) reason subreason:(NSString*)subreason location:(NSString *)location\
 {\
-	NSString * exceptionName = [@"org.titanium." stringByAppendingString:NSStringFromClass([self class])];\
+	NSString * exceptionName = [@"org.thinkingofu." stringByAppendingString:NSStringFromClass([self class])];\
 	NSString * message = [NSString stringWithFormat:@"%@. %@ %@",reason,(subreason!=nil?subreason:@""),(location!=nil?location:@"")];\
 	TiExceptionThrowWithNameAndReason(exceptionName,message);\
 }\
 \
 + (void) throwException:(NSString *) reason subreason:(NSString*)subreason location:(NSString *)location\
 {\
-	NSString * exceptionName = @"org.titanium";\
+	NSString * exceptionName = @"org.thinkingofu";\
 	NSString * message = [NSString stringWithFormat:@"%@. %@ %@",reason,(subreason!=nil?subreason:@""),(location!=nil?location:@"")];\
 	TiExceptionThrowWithNameAndReason(exceptionName,message);\
 }\
@@ -404,28 +404,28 @@ DebugLog(@"[WARN] Ti%@.%@ DEPRECATED in %@, in favor of %@.",@"tanium",api,in,ne
 
  //MUST BE NEGATIVE, as it inhabits the same space as UIBarButtonSystemItem
 enum {
-	UI_titaniumNativeItemNone = -1, 
-	UI_titaniumNativeItemSpinner = -2,
-	UI_titaniumNativeItemProgressBar = -3,
+	UIThinkingOfUNativeItemNone = -1, 
+	UIThinkingOfUNativeItemSpinner = -2,
+	UIThinkingOfUNativeItemProgressBar = -3,
 	
-	UI_titaniumNativeItemSlider = -4,
-	UI_titaniumNativeItemSwitch = -5,
-	UI_titaniumNativeItemMultiButton = -6,
-	UI_titaniumNativeItemSegmented = -7,
+	UIThinkingOfUNativeItemSlider = -4,
+	UIThinkingOfUNativeItemSwitch = -5,
+	UIThinkingOfUNativeItemMultiButton = -6,
+	UIThinkingOfUNativeItemSegmented = -7,
 	
-	UI_titaniumNativeItemTextView = -8,
-	UI_titaniumNativeItemTextField = -9,
-	UI_titaniumNativeItemSearchBar = -10,
+	UIThinkingOfUNativeItemTextView = -8,
+	UIThinkingOfUNativeItemTextField = -9,
+	UIThinkingOfUNativeItemSearchBar = -10,
 	
-	UI_titaniumNativeItemPicker = -11,
-	UI_titaniumNativeItemDatePicker = -12,
+	UIThinkingOfUNativeItemPicker = -11,
+	UIThinkingOfUNativeItemDatePicker = -12,
 	
-	UI_titaniumNativeItemInfoLight = -13,
-	UI_titaniumNativeItemInfoDark = -14,
+	UIThinkingOfUNativeItemInfoLight = -13,
+	UIThinkingOfUNativeItemInfoDark = -14,
 	
-	UI_titaniumNativeItemDisclosure = -15,
+	UIThinkingOfUNativeItemDisclosure = -15,
 	
-	UI_titaniumNativeItemContactAdd = -16
+	UIThinkingOfUNativeItemContactAdd = -16
 };
 
 
@@ -592,7 +592,7 @@ void incrementKrollCounter();
 void decrementKrollCounter();
     
 /**
- *	TiThreadPerformOnMainThread should replace all _titanium instances of
+ *	TiThreadPerformOnMainThread should replace all ThinkingOfU instances of
  *	performSelectorOnMainThread, ESPECIALLY if wait is to be yes. That way,
  *	exceptional-case main thread activities can process them outside of the
  *	standard event loop.

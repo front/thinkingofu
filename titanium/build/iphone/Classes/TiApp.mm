@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -660,8 +660,8 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
 		UIDevice *currentDevice = [UIDevice currentDevice];
 		NSString *currentLocaleIdentifier = [[NSLocale currentLocale] localeIdentifier];
 		NSString *currentDeviceInfo = [NSString stringWithFormat:@"%@/%@; %@; %@;",[currentDevice model],[currentDevice systemVersion],[currentDevice systemName],currentLocaleIdentifier];
-		NSString *k_titaniumUserAgentPrefix = [NSString stringWithFormat:@"%s%s%s %s%s","Appc","eler","ator","Tita","nium"];
-		userAgent = [[NSString stringWithFormat:@"%@/%s (%@)",k_titaniumUserAgentPrefix,TI_VERSION_STR,currentDeviceInfo] retain];
+		NSString *kThinkingOfUUserAgentPrefix = [NSString stringWithFormat:@"%s%s%s %s%s","Appc","eler","ator","Tita","nium"];
+		userAgent = [[NSString stringWithFormat:@"%@/%s (%@)",kThinkingOfUUserAgentPrefix,TI_VERSION_STR,currentDeviceInfo] retain];
 	}
 	return userAgent;
 }

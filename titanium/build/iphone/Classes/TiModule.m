@@ -1,6 +1,6 @@
 /**
- * _titanium _titanium Mobile
- * Copyright (c) 2009-2010 by _titanium, Inc. All Rights Reserved.
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -157,7 +157,7 @@
 		if (resultClass==nil)
 		{
 			DebugLog(@"[WARN] Attempted to load %@: Could not find class definition.",className);
-			@throw [NSException exceptionWithName:@"org.titanium.module" 
+			@throw [NSException exceptionWithName:@"org.thinkingofu.module" 
 										   reason:[NSString stringWithFormat:@"invalid method (%@) passed to %@",name,[self class]] 
 										 userInfo:nil];
 		}
@@ -217,7 +217,7 @@
 
 -(id)bindCommonJSModule:(NSString*)code
 {
-	NSString *js = [[NSString alloc] initWithFormat:_titanium$ModuleRequireFormat,code];
+	NSString *js = [[NSString alloc] initWithFormat:ThinkingOfU$ModuleRequireFormat,code];
 	
 	id result = [[self pageContext] evalJSAndWait:js];
 	[js release];
