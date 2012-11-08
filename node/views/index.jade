@@ -3,5 +3,11 @@ extends layout
 block content
 	h1= title
 	p Welcome to #{title}
-	each thought in thoughts
-		li= thought		
+	div
+		table.table.table-striped.table-bordered.table-hover
+			tbody
+				each thought, i in thoughts
+					tr
+						td=thought.thinker  
+						td is thinking about
+						td=thought.thinkee;

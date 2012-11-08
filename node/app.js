@@ -35,10 +35,11 @@
 // });
 
 
-var application_root = __dirname,
-express = require("express"),
-path = require("path"),
-mongoose = require('mongoose');
+var application_root = __dirname
+, express = require("express")
+, path = require("path")
+, routes = require('./routes')
+, mongoose = require('mongoose');
 
 var app = express();
 
@@ -58,55 +59,39 @@ app.configure(function () {
 // Define Schema
 var Schema = mongoose.Schema;  
 
-var ThoughtModel = new Schema({  
+var ThoughtModelSchema = new Schema({  
   thinker: { type: String, required: true },  
   thinkee: { type: String, required: true },  
   thoughtStarted: { type: Date, default: Date.now }
 });
 
-var ThoughtModel = mongoose.model('ThoughtModel', ThoughtModel);  
+var ThoughtModel = mongoose.model('ThoughtModel', ThoughtModelSchema);  
 
-// Define rest api
-app.get('/api/thoughts', function (req, res){
-  return ThoughtModel.find(function (err, thoughts) {
-    if (!err) {
-      return res.send(thoughts);
-    } else {
-      return console.log(err);
-    }
+
+// routes
+app.get('/api/thoughts', routes.api_thoughts);
+
+
+
+app.get('/', function(err,res){
+  // var ThoughtModel = mongoose.model('ThoughtModel', ThoughtModel);
+  ThoughtModel.find(function(err, thoughts){
+  res.render('index.jade', { title: 'WhosThinkingAboutWho', thoughts: thoughts, errors: [] });
+
+  });   
   });
-});
 
 
 
-// app.get('/', function (req, res) {
-//  var thoughts = ThoughtModel.find(function (err, thoughts) {
-//   if (!err) {
-//     var result = "";
-//     Object.keys(thoughts).forEach(function(key) {
-//       var val = thoughts[key];
-//       var str = "<div>" + val.thinker + " is thinking of " + val.thinkee + "</div>" ;
-//       result = result + str; 
-//       console.log(str);
-//     });
-//       res.send(result);
+app.get('/api', routes.api);
 
-//  }; 
+app.post('/api/think', function(req, res){
 
-// });
-// });
-app.get('/', function (req, res) {
-  res.render('index.jade', { title: 'WhosThinkingAboutWho', thoughts: ["one", "two"], errors: [] });
-});
-
-app.post('/api/think', function (req, res){
-  var product;
-  console.log("POST: ");
-  console.log(req.body);
   thought = new ThoughtModel({
     thinker: req.body.thinker,
-    thinkee: req.body.thinkee,
+    thinkee: req.body.thinkee
   });
+
   thought.save(function (err) {
     if (!err) {
       return console.log("created");
@@ -118,8 +103,14 @@ app.post('/api/think', function (req, res){
   return res.send(thought);
 });
 
-app.get('/api', function (req, res) {
-  res.send('Thinking of you API is running');
+app.post('api/unthink',function(req, res){
+  ThoughtModel.remove({thinker: req.thinker}, function(err){
+    if(err){
+      return handleError(err);
+    } else {
+      console.log("removed");
+    }
+  })
 });
 
 
