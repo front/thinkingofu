@@ -41,7 +41,12 @@ var application_root = __dirname
 , routes = require('./routes')
 , mongoose = require('mongoose');
 
-var app = express();
+
+var app = require('express')()
+  , server = require('http').createServer(app)
+  , io = require('socket.io').listen(server);
+
+
 
 // Database
 
@@ -110,11 +115,24 @@ app.post('api/unthink',function(req, res){
     } else {
       console.log("removed");
     }
-  })
+  });
 });
 
 
 
 
+
+
+
+io.sockets.on('connection', function (socket) {
+	console.log('We have connection');
+  socket.emit('news', { hello: 'world' });
+  socket.on('News', function (data) {
+    console.log(data);
+  });
+});
+
+
+
 // Launch server
-app.listen(3000);
+server.listen(3000);
